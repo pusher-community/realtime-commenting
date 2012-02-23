@@ -10,11 +10,6 @@ function handleSubmit() {
 		"comment": form.find('#comment').val(),
 		"comment_post_ID": form.find('#comment_post_ID').val()
 	};
-	
-	var socketId = getSocketId();
-	if(socketId !== null) {
-	  data.socket_id = socketId;
-	}
 
 	postComment(data);
 
@@ -83,7 +78,7 @@ function parseDisplayDate(date) {
   return display;
 }
 
-$(function() {
+/*$(function() {
   
   $(document).keyup(function(e) {
     e = e || window.event;
@@ -98,20 +93,4 @@ $(function() {
     }
   });
   
-});
-
-Pusher.log = function(msg) {
-  if(console && console.log) {
-    console.log(msg);
-  }
-};
-var pusher = new Pusher(APP_KEY);
-var channel = pusher.subscribe('comments-' +  $('#comment_post_ID').val());
-channel.bind('new_comment', displayComment);
-
-function getSocketId() {
-  if(pusher && pusher.connection.state === 'connected') {
-    return pusher.connection.socket_id;
-  }
-  return null;
-}
+});*/

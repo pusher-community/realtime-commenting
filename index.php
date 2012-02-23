@@ -1,5 +1,4 @@
 <?php
-require('pusher_config.php');
 require('Persistence.php');
 $comment_post_ID = 1;
 $db = new Persistence();
@@ -35,7 +34,7 @@ $has_comments = (count($comments) > 0);
 			<li><a href="#">blog</a></li>
 			<li><a href="#">contact</a></li>
 		</ul></nav>
-	</header><!-- /#banner -->
+	</header>
 	
 	<section id="content" class="body">
 	  
@@ -52,14 +51,14 @@ $has_comments = (count($comments) > 0);
 				<address class="vcard author">
 					By <a class="url fn" href="#">Phil Leggetter</a>
 				</address>
-			</footer><!-- /.post-info -->
+			</footer>
 			
 			<div class="entry-content">
 				<p>The web has become increasingly interactive over the years. This trend is set to continue with the next generation of applications driven by the <strong>real-time web</strong>. Adding real-time functionality to an application can result in a more interactive and engaging user experience. However, setting up and maintaining the server-side realtime components can be an unwanted distraction. But don't worry, there is a solution.</p>
-			</div><!-- /.entry-content -->
+			</div>
 		</article>
 			
-	</section><!-- /#content -->
+	</section>
 	
 	<section id="comments" class="body">
 	  
@@ -141,42 +140,38 @@ $has_comments = (count($comments) > 0);
 				<li><a href="#" rel="external">Wordpress</a></li>
 				<li><a href="#" rel="external">Wikipedia</a></li><article class="hentry">	
 			</ul>
-		</div><!-- /.blogroll -->
+		</div>
 		
 		<div class="social">
 			<h2>social</h2>
 			<ul>
-				<li><a href="http://delicious.com/enrique_ramirez" rel="me">delicious</a></li>
-				<li><a href="http://digg.com/users/enriqueramirez" rel="me">digg</a></li>
-				<li><a href="http://facebook.com/enrique.ramirez.velez" rel="me">facebook</a></li>
-				<li><a href="http://www.lastfm.es/user/enrique-ramirez" rel="me">last.fm</a></li>
+				<li><a href="http://delicious.com/">delicious</a></li>
+				<li><a href="http://digg.com/">digg</a></li>
+				<li><a href="http://facebook.com/">facebook</a></li>
+				<li><a href="http://www.last.fm/">last.fm</a></li>
 				<li><a href="http://website.com/feed/" rel="alternate">rss</a></li>
-				<li><a href="http://twitter.com/enrique_ramirez" rel="me">twitter</a></li>
+				<li><a href="http://twitter.com/">twitter</a></li>
 			</ul>
-		</div><!-- /.social -->
-	</section><!-- /#extras -->
+		</div>
+	</section>
 	
 	<footer id="contentinfo" class="body">
 		<address id="about" class="vcard body">
 			<span class="primary">
 				<strong><a href="#" class="fn url">Smashing Magazine</a></strong>
 				<span class="role">Amazing Magazine</span>
-			</span><!-- /.primary -->
+			</span>
 		
 			<img src="images/avatar.gif" alt="Smashing Magazine Logo" class="photo" />
 		
 			<span class="bio">Smashing Magazine is a website and blog that offers resources and advice to web developers and web designers. It was founded by Sven Lennartz and Vitaly Friedman.</span>
 		
-		</address><!-- /#about -->
+		</address>
 		
 		<p>2005-2012 <a href="http://smashingmagazine.com">Smashing Magazine</a>.</p>
-	</footer><!-- /#contentinfo -->
+	</footer>
 
-<script>
-var APP_KEY = '<?php echo(APP_KEY); ?>';
-</script>
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://js.pusher.com/1.11/pusher.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

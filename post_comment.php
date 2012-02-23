@@ -1,21 +1,10 @@
 <?php
 require('Persistence.php');
-require('squeeks-Pusher-PHP/lib/Pusher.php');
-require('pusher_config.php');
 
 $ajax = ($_SERVER[ 'HTTP_X_REQUESTED_WITH' ] === 'XMLHttpRequest');
 
 $db = new Persistence();
 $added = $db->add_comment($_POST);
-
-if($added) {
-  $channel_name = 'comments-' . $added['comment_post_ID'];
-  $event_name = 'new_comment';
-  $socket_id = (isset($_POST['socket_id'])?$_POST['socket_id']:null);
-  
-  $pusher = new Pusher(APP_KEY, APP_SECRET, APP_ID);
-  $pusher->trigger($channel_name, $event_name, $added, $socket_id);
-}
 
 if($ajax) {
   sendAjaxResponse($added);
