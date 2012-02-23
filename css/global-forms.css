@@ -1,0 +1,119 @@
+/*
+	Name: Global Form Styles
+	Description: Default styling for forms.
+				 Message classes borrowed from
+				 http://www.blueprintcss.org/
+	Coder: Enrique Ramirez
+	Coder URI: http://enrique-ramirez.com
+*/
+
+fieldset {
+	background: #f9f9f9;
+	margin: 1.5em;
+	padding: 2em;
+	
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+legend {font-size: 1.25em; margin-bottom: 0 !important; margin-bottom: 1.429em; padding: 0 .5em;}
+label {font-size: 1.1em; height: 25px; line-height: 25px;}
+
+	/* Input Types */
+	input[type='text'],
+	input[type='email'],
+	input[type='url'],
+	textarea {
+		background: #fff;
+		border: 1px solid #eee;
+		color: #999;
+		font-family: inherit;
+		font-size: inherit;
+		padding: 2px;
+	}
+	input[type='text']:hover,
+	input[type='email']:hover,
+	input[type='url']:hover,
+	textarea:hover {
+		background: #FFFBEF;
+		border-color: #ff0;
+		cursor: text;
+	}
+	input[type='text']:focus,
+	input[type='email']:focus,
+	input[type='url']:focus,
+	textarea:focus {
+		background: #ffC;
+		border-color: #ff1;
+		color: #0d0d0d;
+	}
+	
+	input[type='checkbox'], input[type='radio'] {
+		display: block;
+		margin-top: 4px;
+	}
+	
+	input[type='submit'] {
+		background: #C74350;
+		border: 0;
+		border-radius: 5px;
+		color: #fff;
+		cursor: pointer;
+		font-family: inherit;
+		font-size: inherit;
+		padding: .3em 2em;
+		text-shadow: 1px 1px 1px #000;
+	}
+	
+	input:required, textarea:required {outline: 1px solid #C74350;}
+	
+	/* Textarea */
+	textarea {width: 99%; margin-bottom: 7px;}
+
+	/* Alignments */
+	div.left {margin-left: 1em;}
+	div.right {margin-right: 1em;}
+	
+	.labels-left label, div.left label {
+		clear: left;
+		float: left;
+		margin-right: .5em;
+		text-align: right;
+	}
+	.labels-left input, div.left input, .labels-left select, div.left select {float: left;}
+	
+	.labels-right label, div.right label {
+		float: left;
+		margin-left: .5em;
+		text-align: right;
+	}
+	.labels-right input, div.right input, .labels-right select, div.right select {clear: left; float: left;}
+	
+	.labels-top label, div.top label {display: block;}
+	.labels-top input, div.top input {margin-bottom: 0;}
+	
+	/* Columns */
+	.columns-2 div.column1, .columns-2 div.column2 {float: left; width: 48%;}
+	.columns-2 input.text {width: 150px;}
+	
+	.columns-3 div.column1, .columns-3 div.column2, .columns-3 div.column3 {float: left; width: 33%;}
+	.columns-3 input.text {width: 120px;}
+	
+	.columns-2 div.left, .columns-2 div.right, .columns-2 div.top {width: 32%;}
+	.columns-3 div.left, .columns-3 div.right, .columns-3 div.top {width: 29%;}
+	
+/* Messages classes */
+.req {color: #C74350;}
+.error,.notice, .success {
+	padding: .2em;
+	margin-bottom: 1em;
+	border: 2px solid #ddd;
+}
+
+.error {background: #FBE3E4; border-color: #FBC2C4; color: #8a1f11;}
+.notice {background: #FFF6BF; border-color: #FFD324; color: #514721;}
+.success {background: #E6EFC2; border-color: #C6D880; color: #264409;}
+
+.error a {color: #8a1f11;}
+.notice a {color: #514721;}
+.success a {color: #264409;}
