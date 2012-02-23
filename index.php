@@ -1,14 +1,5 @@
-<?php
-require('pusher_config.php');
-require('Persistence.php');
-$comment_post_ID = 1;
-$db = new Persistence();
-$comments = $db->get_comments($comment_post_ID);
-$has_comments = (count($comments) > 0);
-?>
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en-US">
 <head>
 	<title>Smashing HTML5!</title>
 	<meta charset="utf-8" />
@@ -35,7 +26,7 @@ $has_comments = (count($comments) > 0);
 			<li><a href="#">blog</a></li>
 			<li><a href="#">contact</a></li>
 		</ul></nav>
-	</header><!-- /#banner -->
+	</header>
 	
 	<section id="content" class="body">
 	  
@@ -52,67 +43,12 @@ $has_comments = (count($comments) > 0);
 				<address class="vcard author">
 					By <a class="url fn" href="#">Phil Leggetter</a>
 				</address>
-			</footer><!-- /.post-info -->
+			</footer>
 			
 			<div class="entry-content">
 				<p>The web has become increasingly interactive over the years. This trend is set to continue with the next generation of applications driven by the <strong>real-time web</strong>. Adding real-time functionality to an application can result in a more interactive and engaging user experience. However, setting up and maintaining the server-side realtime components can be an unwanted distraction. But don't worry, there is a solution.</p>
-			</div><!-- /.entry-content -->
+			</div>
 		</article>
-			
-	</section><!-- /#content -->
-	
-	<section id="comments" class="body">
-	  
-	  <header>
-			<h2>Comments</h2>
-		</header>
-
-    <ol id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
-      <li class="no-comments">Be the first to add a comment.</li>
-      <?php
-        foreach ($comments as &$comment) {
-          ?>
-          <li><article id="comment_<?php echo($comment['id']); ?>" class="hentry">	
-    				<footer class="post-info">
-    					<abbr class="published" title="<?php echo($comment['date']); ?>">
-    						<?php echo( date('d F Y', strtotime($comment['date']) ) ); ?>
-    					</abbr>
-
-    					<address class="vcard author">
-    						By <a class="url fn" href="#"><?php echo($comment['comment_author']); ?></a>
-    					</address>
-    				</footer>
-
-    				<div class="entry-content">
-    					<p><?php echo($comment['comment']); ?></p>
-    				</div>
-    			</article></li>
-          <?php
-        }
-      ?>
-		</ol>
-		
-		<div id="respond">
-
-      <h3>Leave a Comment</h3>
-
-      <form action="post_comment.php" method="post" id="commentform">
-
-        <label for="comment_author" class="required">Your name</label>
-        <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
-        
-        <label for="email" class="required">Your email</label>
-        <input type="email" name="email" id="email" value="" tabindex="2" required="required">
-
-        <label for="comment" class="required">Your message</label>
-        <textarea name="comment" id="comment" rows="10" tabindex="4"  required="required"></textarea>
-
-        <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
-        <input name="submit" type="submit" value="Submit comment" />
-        
-      </form>
-      
-    </div>
 			
 	</section>
 	
@@ -170,13 +106,6 @@ $has_comments = (count($comments) > 0);
 		</address><!-- /#about -->
 		
 		<p>2005-2012 <a href="http://smashingmagazine.com">Smashing Magazine</a>.</p>
-	</footer><!-- /#contentinfo -->
-
-<script>
-var APP_KEY = '<?php echo(APP_KEY); ?>';
-</script>
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-<script src="http://js.pusher.com/1.11/pusher.min.js"></script>
-<script src="js/app.js"></script>
+	</footer>
 </body>
 </html>

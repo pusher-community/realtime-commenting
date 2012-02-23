@@ -353,10 +353,6 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 		width: 190px;
 	}
 	
-	#posts-list.has-comments li.no-comments {
-	  display: none;
-	}
-	
 	/* About the Author */
 	#about-author {
 		background: #f9f9f9;
@@ -380,52 +376,6 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 	#about-author .photo {border: 1px solid #ddd; float: left; margin: 5px 1em 0 0;}
 	
 /* Comments */
-
-#comments {
-  background: #fff;
-	margin-bottom: 2em;
-	overflow: hidden;
-	padding: 20px 20px;
-	width: 760px;
-
-	border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
-
-#comments label {
-  display: block;
-}
-
-#comments label:after { 
-  content:" *";
-}
-
-#comments ol li:nth-child(2n+1) {
-  background-color: #F5F4EF;
-}
-
-#respond {
-  margin-top: 40px;
-}
-
-#respond input[type='text'],
-#respond input[type='email'],	
-#respond textarea {
-  margin-bottom: 10px;
-  display: block;
-  width: 100%;
-  
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -o-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  border-radius: 5px;
-  
-  line-height: 1.4em;
-}	
 
 #comments-list {list-style: none; margin: 0 1em;}
 #comments-list blockquote {
