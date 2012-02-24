@@ -52,6 +52,31 @@
 			
 	</section>
 	
+	<section id="comments" class="body">
+	  
+	  <header>
+			<h2>Comments</h2>
+		</header>
+
+    <ol id="posts-list" class="hfeed">
+      <li><article id="comment_1" class="hentry">	
+				<footer class="post-info">
+					<abbr class="published" title="Thu, 23 Feb 2012 23:54:46 +0000">
+						23 February 2012
+					</abbr>
+
+					<address class="vcard author">
+						By <a class="url fn" href="#">Phil Leggetter</a>
+					</address>
+				</footer>
+
+				<div class="entry-content">
+					<p>The Realtime Web Rocks!</p>
+				</div>
+			</article></li>
+		</ol>
+	</section>
+	
 	<section id="extras" class="body">
 		<div class="blogroll">
 			<h2>blogroll</h2>
@@ -77,33 +102,33 @@
 				<li><a href="#" rel="external">Wordpress</a></li>
 				<li><a href="#" rel="external">Wikipedia</a></li><article class="hentry">	
 			</ul>
-		</div><!-- /.blogroll -->
+		</div>
 		
 		<div class="social">
 			<h2>social</h2>
 			<ul>
-				<li><a href="http://delicious.com/enrique_ramirez" rel="me">delicious</a></li>
-				<li><a href="http://digg.com/users/enriqueramirez" rel="me">digg</a></li>
-				<li><a href="http://facebook.com/enrique.ramirez.velez" rel="me">facebook</a></li>
-				<li><a href="http://www.lastfm.es/user/enrique-ramirez" rel="me">last.fm</a></li>
+				<li><a href="http://delicious.com/">delicious</a></li>
+				<li><a href="http://digg.com/">digg</a></li>
+				<li><a href="http://facebook.com/">facebook</a></li>
+				<li><a href="http://www.last.fm">last.fm</a></li>
 				<li><a href="http://website.com/feed/" rel="alternate">rss</a></li>
-				<li><a href="http://twitter.com/enrique_ramirez" rel="me">twitter</a></li>
+				<li><a href="http://twitter.com/">twitter</a></li>
 			</ul>
-		</div><!-- /.social -->
-	</section><!-- /#extras -->
+		</div>
+	</section>
 	
 	<footer id="contentinfo" class="body">
 		<address id="about" class="vcard body">
 			<span class="primary">
 				<strong><a href="#" class="fn url">Smashing Magazine</a></strong>
 				<span class="role">Amazing Magazine</span>
-			</span><!-- /.primary -->
+			</span>
 		
 			<img src="images/avatar.gif" alt="Smashing Magazine Logo" class="photo" />
 		
 			<span class="bio">Smashing Magazine is a website and blog that offers resources and advice to web developers and web designers. It was founded by Sven Lennartz and Vitaly Friedman.</span>
 		
-		</address><!-- /#about -->
+		</address>
 		
 		<p>2005-2012 <a href="http://smashingmagazine.com">Smashing Magazine</a>.</p>
 	</footer>

@@ -405,3 +405,28 @@ li:last-child .hentry, #content > .hentry {border: 0; margin: 0;}
 
 #add-comment input[type='submit'] {float: right; margin: 0 .5em;}
 #add-comment * {margin-bottom: .5em;}
+
+
+#comments {
+  background: #fff;
+	margin-bottom: 2em;
+	overflow: hidden;
+	padding: 20px 20px;
+	width: 760px;
+
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#comments label {
+  display: block;
+}
+
+#comments label:after { 
+  content:" *";
+}
+
+#comments ol li:nth-child(2n+1) {
+  background-color: #F5F4EF;
+}
