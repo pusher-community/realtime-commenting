@@ -80,11 +80,13 @@ class Persistence {
       return false;
     }
     
+    $input['comment_author'] = substr($input['comment_author'], 0, 70);
     if($this->check_string($input['comment_author']) == false) {
       return false;
     }
     $input['comment_author'] = htmlentities($input['comment_author']);
 
+    $input['comment'] = substr($input['comment'], 0, 300);
     if($this->check_string($input['comment'], 5) == false) {
       return false;
     }
