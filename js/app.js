@@ -102,12 +102,17 @@ $(function() {
 
 Pusher.log = function(msg) {
   if(console && console.log) {
-    console.log(msg);
+    console.log(new Date().getTime() + ': ' + msg);
   }
 };
+
 var pusher = new Pusher(APP_KEY);
 var channel = pusher.subscribe('comments-' +  $('#comment_post_ID').val());
 channel.bind('new_comment', displayComment);
+
+pusher.connection.bind('state_change', function(states) {
+  Pusher.log('Connection state changed from: ' + states.previous + ' to ' + states.current);
+});
 
 function getSocketId() {
   if(pusher && pusher.connection.state === 'connected') {
