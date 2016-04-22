@@ -44,6 +44,10 @@ function postError(jqXHR, textStatus, errorThrown) {
 }
 
 function displayComment(data) {
+  if ($("#" + data.id).length > 0) {
+    // Ignore comment as it already exists
+    return
+  }
   var commentHtml = createComment(data);
   var commentEl = $(commentHtml);
   commentEl.hide();
